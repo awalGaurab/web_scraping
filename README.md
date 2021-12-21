@@ -9,6 +9,8 @@ Here,I have attached the full code that read data from multiple pages and the da
 Then we have use for loop to read data from multiple webpage.
 
 
+
+
 import os,csv
 import requests
 from bs4 import BeautifulSoup
