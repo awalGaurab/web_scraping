@@ -5,13 +5,14 @@ I am trying to get data scientist job in Tokyo,Japan.
 
 I have created a csv file with the job title,company name and job location for each of the data scientist job.
 
-In the code,
-Firstly, import all necessary modules.The requests and BeautifulSoup is used for retrieving data from the webpage.
+Here,I have attached the full code that read data from multiple pages and the data read from the webpages are saved to the csv file.
+Then we have use for loop to read data from multiple webpage.
+
+
 import os,csv
 import requests
 from bs4 import BeautifulSoup
 
-Then we have use for loop to read data from multiple webpage.The url get value from 0 to 350 with spaces of 10.
 for i in range(0,351,10):
     url ="https://jp.indeed.com/jobs?q=%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%83%86%E3%82%A3%E3%82%B9%E3%83%88&l=%E6%9D%B1%E4%BA%AC%E9%83%BD&start=               {}".format(i)
     
@@ -27,7 +28,7 @@ for i in range(0,351,10):
         header = ['Job title','Company name','Office location']
 
         path = os.getcwd()
-        filename = 'datascientist_job.csv'
+        filename = 'indeed_joblist.csv'
         file_specified = os.path.join(path,filename)
         file_exists = os.path.exists(file_specified)
 
